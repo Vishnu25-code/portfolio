@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishnu Kant Chauhan - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f4f8; /* Light blue-gray background */
+            color: #1e293b; /* Dark slate text */
+        }
+
+        /* --- Custom Animations --- */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes backgroundPan {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* --- Animation Utility Classes --- */
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        .animate-fadeInUp {
+            animation: fadeInUp 0.8s ease-out forwards;
+            opacity: 0; /* Start hidden */
+        }
+        
+        .stagger-animation {
+            animation-delay: var(--stagger-delay, 0s);
+        }
+
+        /* --- Animated Gradient Header --- */
+        .animated-gradient-header {
+            background: linear-gradient(90deg, #4f46e5, #ec4899, #f59e0b, #10b981);
+            background-size: 400% 400%;
+            animation: backgroundPan 15s ease infinite;
+        }
+
+        /* --- Section Styling --- */
+        .section-card {
+            background-color: #ffffff;
+            border-radius: 1.5rem; /* More rounded corners */
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .section-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+        }
+
+        /* --- Scrollbar Styling --- */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f0f4f8;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #4f46e5;
+            border-radius: 10px;
+            border: 2px solid #f0f4f8;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <!-- Sticky Navigation -->
+    <nav id="navbar" class="sticky top-0 z-50 bg-white/80 backdrop-blur-md shadow-sm transition-all duration-300 opacity-0 -translate-y-full">
+        <div class="container mx-auto px-4">
+            <div class="flex justify-between items-center py-4">
+                <a href="#" class="text-2xl font-bold text-indigo-600">Vishnu K. Chauhan</a>
+                <div class="hidden md:flex items-center space-x-8 text-lg font-medium">
+                    <a href="#education" class="text-gray-600 hover:text-indigo-600 transition-colors">Education</a>
+                    <a href="#skills" class="text-gray-600 hover:text-indigo-600 transition-colors">Skills</a>
+                    <a href="#projects" class="text-gray-600 hover:text-indigo-600 transition-colors">Projects</a>
+                    <a href="#contact" class="bg-indigo-600 text-white px-4 py-2 rounded-full hover:bg-indigo-700 transition-transform hover:scale-105">Contact Me</a>
+                </div>
+                <div class="md:hidden">
+                    <!-- Mobile menu button can be added here -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- Header Section -->
+    <header class="animated-gradient-header text-white p-6 md:p-12 text-center overflow-hidden">
+        <div class="max-w-4xl mx-auto animate-fadeIn" style="animation-duration: 1.5s;">
+            <h1 class="text-5xl md:text-7xl font-black tracking-tight leading-tight">Vishnu Kant Chauhan</h1>
+            <p class="mt-4 text-xl md:text-2xl font-light">B.Tech Student & Aspiring Software Engineer</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4 md:p-8 -mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <!-- Left Column: Contact & Objective -->
+            <div class="md:col-span-1 space-y-8">
+                <!-- Contact Card -->
+                <div id="contact" class="section-card p-8 animate-fadeInUp">
+                    <h2 class="text-2xl font-bold text-indigo-600 border-b-2 border-indigo-200 pb-2 mb-4">Contact</h2>
+                    <div class="space-y-4">
+                        <a href="mailto:chauhanvishnukant39@gmail.com" class="flex items-center group">
+                            <svg class="w-6 h-6 mr-3 text-indigo-500 group-hover:text-pink-500 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            <span class="group-hover:underline">chauhanvishnukant39@gmail.com</span>
+                        </a>
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            <span>9839240456</span>
+                        </div>
+                        <div class="flex items-center">
+                             <svg class="w-6 h-6 mr-3 text-indigo-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            <span>Ghaziabad</span>
+                        </div>
+                         <div class="border-t border-gray-200 mt-4 pt-4 flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.865 8.168 6.839 9.49.5.092.682-.217.682-.482 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.031-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.03 1.595 1.03 2.688 0 3.848-2.338 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.001 10.001 0 0022 12c0-5.523-4.477-10-10-10z" clip-rule="evenodd" /></svg>
+                            </a>
+                             <a href="#" class="text-gray-500 hover:text-indigo-600 transition-colors">
+                                <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Objective Card -->
+                <div id="objective" class="section-card p-8 animate-fadeInUp stagger-animation" style="--stagger-delay: 0.2s;">
+                    <h2 class="text-2xl font-bold text-pink-600 border-b-2 border-pink-200 pb-2 mb-4">Objective</h2>
+                    <p class="text-lg leading-relaxed">
+                        Motivated and diligent B.Tech student with a strong foundation in DSA and OOPs. I am eager for challenging internship opportunities to apply my theoretical knowledge, expand my practical skills in computer science and engineering, and contribute to innovative projects.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Right Column: Education, Skills, Projects -->
+            <div class="md:col-span-2 space-y-8">
+                <!-- Education Card -->
+                <div id="education" class="section-card p-8 animate-fadeInUp stagger-animation" style="--stagger-delay: 0.4s;">
+                     <h2 class="text-2xl font-bold text-orange-500 border-b-2 border-orange-200 pb-2 mb-4">Education</h2>
+                     <div class="relative pl-6 before:absolute before:top-2 before:left-2 before:w-0.5 before:h-full before:bg-gray-200">
+                         <div class="relative mb-4">
+                             <div class="absolute -left-7 top-1.5 w-4 h-4 bg-orange-500 rounded-full"></div>
+                             <h3 class="text-xl font-semibold">B.Tech in Computer Science & Engineering</h3>
+                             <p class="text-md text-gray-600">KIET Group of Institutions, Ghaziabad</p>
+                             <p class="text-sm text-gray-500">Currently in Third Year</p>
+                             <p class="mt-2 text-lg font-medium">CGPA: <span class="font-bold text-orange-600">7.1</span></p>
+                         </div>
+                     </div>
+                </div>
+
+                <!-- Skills Card -->
+                <div id="skills" class="section-card p-8 animate-fadeInUp stagger-animation" style="--stagger-delay: 0.6s;">
+                    <h2 class="text-2xl font-bold text-green-500 border-b-2 border-green-200 pb-2 mb-4">Skills</h2>
+                    <div class="space-y-6">
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-700 mb-2">Languages & Core Subjects</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="skill-badge bg-green-100 text-green-800">C++</span>
+                                <span class="skill-badge bg-green-100 text-green-800">Python</span>
+                                <span class="skill-badge bg-green-100 text-green-800">Data Structures & Algorithms</span>
+                                <span class="skill-badge bg-green-100 text-green-800">Object-Oriented Programming (OOPs)</span>
+                                <span class="skill-badge bg-green-100 text-green-800">Operating Systems (Basic)</span>
+                                <span class="skill-badge bg-green-100 text-green-800">DBMS</span>
+                            </div>
+                        </div>
+                         <div>
+                            <h3 class="text-lg font-semibold text-gray-700 mb-2">Data Science & Machine Learning</h3>
+                            <div class="flex flex-wrap gap-3">
+                                <span class="skill-badge bg-yellow-100 text-yellow-800 border border-yellow-300">Data Science (Learning)</span>
+                                <span class="skill-badge bg-yellow-100 text-yellow-800 border border-yellow-300">Machine Learning (Learning)</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800">Pandas & NumPy</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800">Scikit-learn</span>
+                                <span class="skill-badge bg-blue-100 text-blue-800">TensorFlow/Keras</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Card -->
+                <div id="projects" class="section-card p-8 animate-fadeInUp stagger-animation" style="--stagger-delay: 0.8s;">
+                    <h2 class="text-2xl font-bold text-purple-600 border-b-2 border-purple-200 pb-2 mb-4">Projects</h2>
+                    <div class="space-y-6">
+                        <div class="p-6 border border-gray-200 rounded-xl bg-gray-50 hover:bg-white hover:shadow-md transition-all">
+                            <h3 class="text-xl font-bold text-purple-800">Stock Price Predictor</h3>
+                            <p class="mt-2 text-md leading-relaxed">
+                                Developed a predictive model using Long Short-Term Memory (LSTM) neural networks to forecast stock market prices. The project involved collecting and preprocessing historical stock data, building and training the model, and evaluating its performance with metrics like RMSE to achieve accurate predictions.
+                            </p>
+                            <p class="mt-3 text-sm font-semibold text-purple-600">Tech Stack: Python, Pandas, NumPy, Scikit-learn, TensorFlow/Keras</p>
+                             <div class="mt-4 flex space-x-4">
+                                <a href="#" class="text-white bg-purple-600 hover:bg-purple-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-transform hover:scale-105">View Code</a>
+                            </div>
+                        </div>
+                        <div class="p-6 border border-gray-200 rounded-xl bg-gray-50 hover:bg-white hover:shadow-md transition-all">
+                            <h3 class="text-xl font-bold text-purple-800">Personal Portfolio Website</h3>
+                            <p class="mt-2 text-md leading-relaxed">
+                                Designed and built a responsive personal portfolio website from scratch to showcase my skills, projects, and professional background. Implemented a modern design with CSS animations and a mobile-first approach to ensure a great user experience across all devices.
+                            </p>
+                            <p class="mt-3 text-sm font-semibold text-purple-600">Tech Stack: HTML, Tailwind CSS, JavaScript</p>
+                             <div class="mt-4 flex space-x-4">
+                                <a href="#" class="text-white bg-purple-600 hover:bg-purple-700 font-medium rounded-lg text-sm px-5 py-2.5 text-center transition-transform hover:scale-105">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                 <div id="achievements" class="section-card p-8 animate-fadeInUp stagger-animation" style="--stagger-delay: 1.0s;">
+                    <h2 class="text-2xl font-bold text-teal-600 border-b-2 border-teal-200 pb-2 mb-4">Achievements</h2>
+                    <ul class="list-disc list-inside space-y-2 text-lg">
+                        <li>Solved over 300+ problems on various coding platforms like LeetCode and GeeksforGeeks.</li>
+                        <li>Achieved a 5-star rating in C++ on HackerRank.</li>
+                        <li>(Placeholder) Participated in Smart India Hackathon 2023.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center p-8 mt-12 text-gray-500">
+        <p>&copy; 2024 Vishnu Kant Chauhan. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        // Add styles dynamically for better performance and utility-like usage in HTML
+        document.addEventListener('DOMContentLoaded', () => {
+            const skillBadge = document.createElement('style');
+            skillBadge.innerHTML = `
+                .skill-badge {
+                    font-size: 0.875rem; /* 14px */
+                    font-weight: 500;
+                    padding: 0.5rem 1rem;
+                    border-radius: 9999px; /* pill shape */
+                    transition: all 0.2s ease-in-out;
+                }
+                .skill-badge:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+                }
+            `;
+            document.head.appendChild(skillBadge);
+
+            // Staggered animation observer
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animate-fadeInUp');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            document.querySelectorAll('.animate-fadeInUp').forEach(el => {
+                observer.observe(el);
+            });
+
+            // Sticky nav logic
+            const nav = document.getElementById('navbar');
+            const header = document.querySelector('header');
+            const navObserver = new IntersectionObserver(
+                ([entry]) => {
+                    if (!entry.isIntersecting) {
+                        nav.classList.remove('opacity-0', '-translate-y-full');
+                    } else {
+                        nav.classList.add('opacity-0', '-translate-y-full');
+                    }
+                },
+                { rootMargin: "100px 0px 0px 0px" }
+            );
+            navObserver.observe(header);
+        });
+    </script>
+</body>
+</html>
+
